@@ -12,30 +12,30 @@
   --bg-card: #1E1E1E;
   --bg-card-hover: #252525;
 
-  --gold: #FFD700;
-  --gold-dark: #D4AF37;
-  --gold-light: #F5DEB3;
-  --gold-hover: #FFC107;
-  --orange: #FF8C00;
+  --gold: #C9956C;
+  --gold-dark: #A67C52;
+  --gold-light: #F0D5C8;
+  --gold-hover: #D4A882;
+  --orange: #C47A4A;
 
   --text-primary: #FFFFFF;
   --text-secondary: #CCCCCC;
   --text-muted: #888888;
 
-  --gradient-luxury: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #F5DEB3 100%);
+  --gradient-luxury: linear-gradient(135deg, #A67C52 0%, #C9956C 50%, #F0D5C8 100%);
   --gradient-romantic: linear-gradient(135deg, #FF4E50 0%, #F9D423 100%);
   --gradient-dark: linear-gradient(135deg, #141E30 0%, #243B55 100%);
   --gradient-festive: linear-gradient(135deg, #C31432 0%, #240B36 100%);
   --gradient-bg: linear-gradient(160deg, #141414 0%, #1a1a1a 40%, #2C2C2C 100%);
-  --gradient-gold-btn: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #FF8C00 100%);
+  --gradient-gold-btn: linear-gradient(135deg, #A67C52 0%, #C9956C 50%, #C47A4A 100%);
 
-  --border-gold: 1px solid rgba(255, 215, 0, 0.2);
+  --border-gold: 1px solid rgba(201, 149, 108, 0.2);
   --border-card: 1px solid rgba(255,255,255,0.06);
 
-  --shadow-gold: 0 0 30px rgba(255, 215, 0, 0.15);
+  --shadow-gold: 0 0 30px rgba(201, 149, 108, 0.15);
   --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
   --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.6);
-  --shadow-btn: 0 4px 20px rgba(255, 215, 0, 0.4);
+  --shadow-btn: 0 4px 20px rgba(201, 149, 108, 0.4);
 
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -144,7 +144,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .loader-ring {
   width: 60px;
   height: 60px;
-  border: 3px solid rgba(255, 215, 0, 0.1);
+  border: 3px solid rgba(201, 149, 108, 0.1);
   border-top: 3px solid var(--gold);
   border-radius: 50%;
   animation: spin 1s linear infinite;
@@ -171,7 +171,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* ── Selection ── */
 ::selection {
-  background: rgba(255, 215, 0, 0.25);
+  background: rgba(201, 149, 108, 0.25);
   color: var(--text-primary);
 }
 
@@ -268,7 +268,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5);
+  box-shadow: 0 8px 30px rgba(201, 149, 108, 0.5);
 }
 
 .btn-primary:active {
@@ -296,7 +296,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 215, 0, 0.1);
+  background: rgba(201, 149, 108, 0.1);
   border-color: var(--gold);
   color: var(--gold);
 }
@@ -476,7 +476,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .nav-icon-btn:hover {
-  background: rgba(255, 215, 0, 0.1);
+  background: rgba(201, 149, 108, 0.1);
   color: var(--gold);
 }
 
@@ -558,7 +558,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .mobile-nav .nav-link:hover {
-  background: rgba(255, 215, 0, 0.08);
+  background: rgba(201, 149, 108, 0.08);
 }
 
 .mobile-overlay {
@@ -652,7 +652,7 @@ input[type="number"]::-webkit-inner-spin-button {
   right: 10%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(255,215,0,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(201, 149, 108,0.06) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 1;
   animation: pulse 4s ease-in-out infinite;
@@ -676,7 +676,7 @@ input[type="number"]::-webkit-inner-spin-button {
   align-items: center;
   gap: 8px;
   padding: 8px 20px;
-  background: rgba(255, 215, 0, 0.08);
+  background: rgba(201, 149, 108, 0.08);
   border: var(--border-gold);
   border-radius: var(--radius-full);
   font-size: 0.75rem;
@@ -788,7 +788,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .scroll-mouse {
   width: 26px;
   height: 42px;
-  border: 2px solid rgba(255,215,0,0.4);
+  border: 2px solid rgba(201, 149, 108,0.4);
   border-radius: 13px;
   display: flex;
   align-items: flex-start;
@@ -869,7 +869,7 @@ input[type="number"]::-webkit-inner-spin-button {
     to top,
     rgba(0, 0, 0, 0.92) 0%,
     rgba(0, 0, 0, 0.5) 60%,
-    rgba(255, 215, 0, 0.05) 100%
+    rgba(201, 149, 108, 0.05) 100%
   );
 }
 
@@ -912,8 +912,8 @@ input[type="number"]::-webkit-inner-spin-button {
   position: absolute;
   top: 16px; right: 16px;
   width: 36px; height: 36px;
-  background: rgba(255,215,0,0.15);
-  border: 1px solid rgba(255,215,0,0.3);
+  background: rgba(201, 149, 108,0.15);
+  border: 1px solid rgba(201, 149, 108,0.3);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -957,7 +957,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .product-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
-  border-color: rgba(255, 215, 0, 0.15);
+  border-color: rgba(201, 149, 108, 0.15);
 }
 
 .product-card-image {
@@ -1136,12 +1136,12 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 700;
   transition: var(--transition);
   flex-shrink: 0;
-  box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+  box-shadow: 0 4px 15px rgba(201, 149, 108,0.3);
 }
 
 .add-to-cart-btn:hover {
   transform: scale(1.15) rotate(8deg);
-  box-shadow: 0 6px 25px rgba(255,215,0,0.5);
+  box-shadow: 0 6px 25px rgba(201, 149, 108,0.5);
 }
 
 .add-to-cart-btn.added {
@@ -1304,7 +1304,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .why-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
-  border-color: rgba(255, 215, 0, 0.12);
+  border-color: rgba(201, 149, 108, 0.12);
 }
 
 .why-card:hover::before {
@@ -1314,8 +1314,8 @@ input[type="number"]::-webkit-inner-spin-button {
 .why-icon {
   width: 72px; height: 72px;
   margin: 0 auto 24px;
-  background: linear-gradient(135deg, rgba(212,175,55,0.1) 0%, rgba(255,215,0,0.05) 100%);
-  border: 1px solid rgba(255,215,0,0.2);
+  background: linear-gradient(135deg, rgba(166, 124, 82,0.1) 0%, rgba(201, 149, 108,0.05) 100%);
+  border: 1px solid rgba(201, 149, 108,0.2);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -1377,7 +1377,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .review-card:hover {
-  border-color: rgba(255, 215, 0, 0.15);
+  border-color: rgba(201, 149, 108, 0.15);
   box-shadow: var(--shadow-card);
 }
 
@@ -1386,7 +1386,7 @@ input[type="number"]::-webkit-inner-spin-button {
   top: 24px; right: 28px;
   font-size: 3.5rem;
   font-family: Georgia, serif;
-  color: rgba(255, 215, 0, 0.1);
+  color: rgba(201, 149, 108, 0.1);
   line-height: 1;
 }
 
@@ -1416,7 +1416,7 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 50px; height: 50px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(255,215,0,0.3);
+  border: 2px solid rgba(201, 149, 108,0.3);
 }
 
 .review-author-info h4 {
@@ -1556,7 +1556,7 @@ input[type="number"]::-webkit-inner-spin-button {
   top: -100px; left: 50%;
   transform: translateX(-50%);
   width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(255,215,0,0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(201, 149, 108,0.05) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -1570,7 +1570,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .newsletter-icon {
   width: 72px; height: 72px;
   margin: 0 auto 28px;
-  background: rgba(255,215,0,0.08);
+  background: rgba(201, 149, 108,0.08);
   border: var(--border-gold);
   border-radius: 50%;
   display: flex;
@@ -1616,9 +1616,9 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .newsletter-input:focus {
-  border-color: rgba(255,215,0,0.5);
-  background: rgba(255,215,0,0.05);
-  box-shadow: 0 0 0 4px rgba(255,215,0,0.08);
+  border-color: rgba(201, 149, 108,0.5);
+  background: rgba(201, 149, 108,0.05);
+  box-shadow: 0 0 0 4px rgba(201, 149, 108,0.08);
 }
 
 .newsletter-note {
@@ -1692,7 +1692,7 @@ input[type="number"]::-webkit-inner-spin-button {
   color: var(--text-primary);
   margin-bottom: 24px;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(255,215,0,0.15);
+  border-bottom: 1px solid rgba(201, 149, 108,0.15);
 }
 
 .footer-links {
@@ -1847,7 +1847,7 @@ input[type="number"]::-webkit-inner-spin-button {
   color: var(--text-primary);
   margin-bottom: 20px;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(255,215,0,0.15);
+  border-bottom: 1px solid rgba(201, 149, 108,0.15);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1877,8 +1877,8 @@ input[type="number"]::-webkit-inner-spin-button {
 .search-input::placeholder { color: var(--text-muted); }
 
 .search-input:focus {
-  border-color: rgba(255,215,0,0.4);
-  background: rgba(255,215,0,0.04);
+  border-color: rgba(201, 149, 108,0.4);
+  background: rgba(201, 149, 108,0.04);
 }
 
 .search-icon {
@@ -1908,7 +1908,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .filter-item:hover,
 .filter-item.active {
-  background: rgba(255,215,0,0.08);
+  background: rgba(201, 149, 108,0.08);
 }
 
 .filter-item input[type="checkbox"] {
@@ -1996,7 +1996,7 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 50%;
   background: var(--gold);
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(255,215,0,0.4);
+  box-shadow: 0 0 10px rgba(201, 149, 108,0.4);
   transition: var(--transition);
 }
 
@@ -2063,8 +2063,8 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .view-btn.active,
 .view-btn:hover {
-  background: rgba(255,215,0,0.1);
-  border-color: rgba(255,215,0,0.3);
+  background: rgba(201, 149, 108,0.1);
+  border-color: rgba(201, 149, 108,0.3);
   color: var(--gold);
 }
 
@@ -2316,7 +2316,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .option-btn.active,
 .option-btn:hover {
-  background: rgba(255,215,0,0.08);
+  background: rgba(201, 149, 108,0.08);
   border-color: var(--gold);
   color: var(--gold);
 }
@@ -2350,7 +2350,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .qty-btn:hover {
-  background: rgba(255,215,0,0.1);
+  background: rgba(201, 149, 108,0.1);
   color: var(--gold);
 }
 
@@ -2564,7 +2564,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .cart-empty i {
   font-size: 4rem;
-  color: rgba(255,215,0,0.15);
+  color: rgba(201, 149, 108,0.15);
   margin-bottom: 24px;
   display: block;
 }
@@ -2596,7 +2596,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 1.25rem;
   margin-bottom: 24px;
   padding-bottom: 16px;
-  border-bottom: 1px solid rgba(255,215,0,0.15);
+  border-bottom: 1px solid rgba(201, 149, 108,0.15);
 }
 
 .summary-row {
@@ -2621,7 +2621,7 @@ input[type="number"]::-webkit-inner-spin-button {
   justify-content: space-between;
   align-items: center;
   padding-top: 16px;
-  border-top: 1px solid rgba(255,215,0,0.15);
+  border-top: 1px solid rgba(201, 149, 108,0.15);
   margin-top: 8px;
   margin-bottom: 24px;
 }
@@ -2661,7 +2661,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .coupon-input::placeholder { color: var(--text-muted); }
 
 .coupon-input:focus {
-  border-color: rgba(255,215,0,0.4);
+  border-color: rgba(201, 149, 108,0.4);
 }
 
 .checkout-btn {
@@ -2750,7 +2750,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 600;
   margin-bottom: 24px;
   padding-bottom: 16px;
-  border-bottom: 1px solid rgba(255,215,0,0.1);
+  border-bottom: 1px solid rgba(201, 149, 108,0.1);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -2805,9 +2805,9 @@ input[type="number"]::-webkit-inner-spin-button {
 .form-input:focus,
 .form-select:focus,
 .form-textarea:focus {
-  border-color: rgba(255,215,0,0.5);
-  background: rgba(255,215,0,0.04);
-  box-shadow: 0 0 0 4px rgba(255,215,0,0.06);
+  border-color: rgba(201, 149, 108,0.5);
+  background: rgba(201, 149, 108,0.04);
+  box-shadow: 0 0 0 4px rgba(201, 149, 108,0.06);
 }
 
 .form-select option {
@@ -2834,8 +2834,8 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .payment-method-option:has(input:checked),
 .payment-method-option.selected {
-  background: rgba(255,215,0,0.06);
-  border-color: rgba(255,215,0,0.3);
+  background: rgba(201, 149, 108,0.06);
+  border-color: rgba(201, 149, 108,0.3);
 }
 
 .payment-method-option input[type="radio"] {
@@ -2946,7 +2946,7 @@ input[type="number"]::-webkit-inner-spin-button {
   top: -200px; left: 50%;
   transform: translateX(-50%);
   width: 800px; height: 800px;
-  background: radial-gradient(circle, rgba(255,215,0,0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(201, 149, 108,0.04) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -3160,7 +3160,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .contact-detail-icon {
   width: 50px; height: 50px;
-  background: rgba(255,215,0,0.08);
+  background: rgba(201, 149, 108,0.08);
   border: var(--border-gold);
   border-radius: var(--radius-md);
   display: flex;
@@ -3303,7 +3303,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .back-to-top:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(255,215,0,0.5);
+  box-shadow: 0 8px 30px rgba(201, 149, 108,0.5);
 }
 
 /* Quick View Modal */
@@ -3484,8 +3484,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 @keyframes goldPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(255,215,0,0.4); }
-  50%       { box-shadow: 0 0 0 12px rgba(255,215,0,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 149, 108,0.4); }
+  50%       { box-shadow: 0 0 0 12px rgba(201, 149, 108,0); }
 }
 
 /* ══════════════════════════════════════════
@@ -3745,7 +3745,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .bg-pattern {
-  background-image: radial-gradient(rgba(255,215,0,0.04) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(201, 149, 108,0.04) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -3808,8 +3808,8 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255,215,0,0.07);
-  border: 1px solid rgba(255,215,0,0.18);
+  background: rgba(201, 149, 108,0.07);
+  border: 1px solid rgba(201, 149, 108,0.18);
   border-radius: var(--radius-md);
   padding: 12px 18px;
   font-size: 0.87rem;
@@ -3924,7 +3924,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background: var(--gold);
   color: #000;
   border-color: var(--gold);
-  box-shadow: 0 0 16px rgba(255,215,0,0.3);
+  box-shadow: 0 0 16px rgba(201, 149, 108,0.3);
 }
 .checkout-step-line {
   flex: 1;
@@ -3987,8 +3987,8 @@ input[type="number"]::-webkit-inner-spin-button {
   transition: var(--transition);
 }
 .payment-method-label:has(input:checked) .payment-method-card {
-  border-color: rgba(255,215,0,0.35);
-  background: rgba(255,215,0,0.05);
+  border-color: rgba(201, 149, 108,0.35);
+  background: rgba(201, 149, 108,0.05);
 }
 .form-grid {
   display: grid;
@@ -4018,8 +4018,8 @@ input[type="number"]::-webkit-inner-spin-button {
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(ellipse 60% 50% at 30% 50%, rgba(255,215,0,0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 60% at 70% 80%, rgba(212,175,55,0.04) 0%, transparent 50%);
+    radial-gradient(ellipse 60% 50% at 30% 50%, rgba(201, 149, 108,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 70% 80%, rgba(166, 124, 82,0.04) 0%, transparent 50%);
   pointer-events: none;
 }
 .auth-visual-content {
@@ -4066,8 +4066,8 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(255,215,0,0.1);
-  border: 1px solid rgba(255,215,0,0.2);
+  background: rgba(201, 149, 108,0.1);
+  border: 1px solid rgba(201, 149, 108,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4168,15 +4168,15 @@ input[type="number"]::-webkit-inner-spin-button {
   transition: var(--transition);
 }
 .contact-quick-card:hover {
-  border-color: rgba(255,215,0,0.3);
+  border-color: rgba(201, 149, 108,0.3);
   transform: translateY(-4px);
   box-shadow: var(--shadow-gold);
 }
 .contact-quick-icon {
   width: 56px;
   height: 56px;
-  background: rgba(255,215,0,0.1);
-  border: 1px solid rgba(255,215,0,0.2);
+  background: rgba(201, 149, 108,0.1);
+  border: 1px solid rgba(201, 149, 108,0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -4189,7 +4189,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .contact-quick-card:hover .contact-quick-icon {
   background: var(--gold);
   color: #000;
-  box-shadow: 0 0 20px rgba(255,215,0,0.3);
+  box-shadow: 0 0 20px rgba(201, 149, 108,0.3);
 }
 .contact-quick-card h3 {
   font-family: var(--font-heading);
@@ -4296,8 +4296,8 @@ input[type="number"]::-webkit-inner-spin-button {
   flex-wrap: wrap;
   margin-bottom: 24px;
   padding: 20px;
-  background: rgba(255,215,0,0.04);
-  border: 1px solid rgba(255,215,0,0.1);
+  background: rgba(201, 149, 108,0.04);
+  border: 1px solid rgba(201, 149, 108,0.1);
   border-radius: var(--radius-md);
 }
 .product-price-large {
@@ -4351,8 +4351,8 @@ input[type="number"]::-webkit-inner-spin-button {
   font-family: var(--font-body);
 }
 .option-btn:hover, .option-btn.active {
-  background: rgba(255,215,0,0.1);
-  border-color: rgba(255,215,0,0.4);
+  background: rgba(201, 149, 108,0.1);
+  border-color: rgba(201, 149, 108,0.4);
   color: var(--gold);
 }
 .quantity-row {
@@ -4381,8 +4381,8 @@ input[type="number"]::-webkit-inner-spin-button {
   transition: var(--transition);
 }
 .btn-ghost:hover {
-  background: rgba(255,215,0,0.07);
-  border-color: rgba(255,215,0,0.25);
+  background: rgba(201, 149, 108,0.07);
+  border-color: rgba(201, 149, 108,0.25);
   color: var(--gold);
 }
 .product-features {
