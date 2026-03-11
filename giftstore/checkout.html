@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Securely complete your purchase at Gift4You – Premium Gift Store.">
+  <title>Checkout – Gift4You | Premium Gift Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="loading-screen">
+  <div class="loader-logo">Gift4You</div>
+  <div class="loader-ring"></div>
+</div>
+
+<div class="mobile-overlay"></div>
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-logo" aria-label="Gift4You Home">
+      <div class="logo-icon">G</div>
+      <span class="logo-text">Gift4You</span>
+    </a>
+    <ul class="navbar-nav" role="list">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="shop.html" class="nav-link">Shop</a></li>
+      <li><a href="product.html" class="nav-link">Products</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <a href="cart.html" class="nav-icon-btn" aria-label="Cart">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge" style="display:none">0</span>
+      </a>
+
+    </div>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="shop.html" class="nav-link">Shop</a>
+  <a href="cart.html" class="nav-link">Cart</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+
+</nav>
+
+<main class="checkout-page page-wrapper" aria-label="Checkout">
+  <div class="container">
+
+    <!-- Page Header -->
+    <div class="page-header reveal">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right" style="font-size:0.7rem"></i>
+        <a href="cart.html">Cart</a>
+        <i class="fas fa-chevron-right" style="font-size:0.7rem"></i>
+        <span aria-current="page">Checkout</span>
+      </nav>
+      <h1 class="page-header-title">Secure Checkout</h1>
+    </div>
+
+    <!-- Checkout Steps -->
+    <div class="checkout-steps reveal" aria-label="Checkout progress">
+      <div class="checkout-step active" data-step="1">
+        <div class="step-num">1</div>
+        <span>Delivery</span>
+      </div>
+      <div class="checkout-step-line"></div>
+      <div class="checkout-step" data-step="2">
+        <div class="step-num">2</div>
+        <span>Payment</span>
+      </div>
+      <div class="checkout-step-line"></div>
+      <div class="checkout-step" data-step="3">
+        <div class="step-num">3</div>
+        <span>Confirm</span>
+      </div>
+    </div>
+
+    <!-- Checkout Layout -->
+    <div class="checkout-layout">
+
+      <!-- Form -->
+      <div class="checkout-form-wrap">
+        <form id="checkout-form" novalidate autocomplete="on">
+
+          <!-- Delivery Info -->
+          <div class="checkout-card" style="margin-bottom:24px">
+            <div class="checkout-card-header">
+              <i class="fas fa-map-marker-alt"></i> Delivery Information
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fname" class="form-label">First Name <span class="required">*</span></label>
+                <div class="input-icon-wrap">
+                  <i class="fas fa-user input-icon-el"></i>
+                  <input 
+                    type="text" 
+                    id="fname" 
+                    name="fname" 
+                    class="form-input input-with-icon" 
+                    placeholder="Your first name" 
+                    required 
+                    autocomplete="given-name"
+                    minlength="2"
+                    maxlength="60"
+                    aria-required="true"
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="lname" class="form-label">Last Name <span class="required">*</span></label>
+                <div class="input-icon-wrap">
+                  <i class="fas fa-user input-icon-el"></i>
+                  <input 
+                    type="text" 
+                    id="lname" 
+                    name="lname" 
+                    class="form-input input-with-icon" 
+                    placeholder="Your last name" 
+                    required 
+                    autocomplete="family-name"
+                    minlength="1"
+                    maxlength="60"
+                    aria-required="true"
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                <div class="input-icon-wrap">
+                  <i class="fas fa-envelope input-icon-el"></i>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    class="form-input input-with-icon" 
+                    placeholder="you@email.com" 
+                    required 
+                    autocomplete="email"
+                    maxlength="100"
+                    aria-required="true"
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number <span class="required">*</span></label>
+                <div class="input-icon-wrap">
+                  <i class="fas fa-phone input-icon-el"></i>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    class="form-input input-with-icon" 
+                    placeholder="+91 98765 43210" 
+                    required 
+                    autocomplete="tel"
+                    maxlength="15"
+                    pattern="[0-9+\-\s]{7,15}"
+                    aria-required="true"
+                  >
+                </div>
+              </div>
+              <div class="form-group" style="grid-column:1/-1">
+                <label for="address" class="form-label">Street Address <span class="required">*</span></label>
+                <div class="input-icon-wrap">
+                  <i class="fas fa-home input-icon-el"></i>
+                  <input 
+                    type="text" 
+                    id="address" 
+                    name="address" 
+                    class="form-input input-with-icon" 
+                    placeholder="House/Flat No., Street, Area" 
+                    required 
+                    autocomplete="street-address"
+                    maxlength="200"
+                    aria-required="true"
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="city" class="form-label">City <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="city" 
+                  name="city" 
+                  class="form-input" 
+                  placeholder="City" 
+                  required 
+                  autocomplete="address-level2"
+                  maxlength="60"
+                  aria-required="true"
+                >
+              </div>
+              <div class="form-group">
+                <label for="state" class="form-label">State</label>
+                <select id="state" name="state" class="form-input" autocomplete="address-level1">
+                  <option value="">Select state</option>
+                  <option>Maharashtra</option>
+                  <option>Delhi</option>
+                  <option>Karnataka</option>
+                  <option>Tamil Nadu</option>
+                  <option>Gujarat</option>
+                  <option>Rajasthan</option>
+                  <option>Uttar Pradesh</option>
+                  <option>West Bengal</option>
+                  <option>Telangana</option>
+                  <option>Kerala</option>
+                  <option>Punjab</option>
+                  <option>Haryana</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="pincode" class="form-label">Pincode <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="pincode" 
+                  name="pincode" 
+                  class="form-input" 
+                  placeholder="6-digit PIN" 
+                  required 
+                  pattern="[1-9][0-9]{5}"
+                  maxlength="6"
+                  autocomplete="postal-code"
+                  aria-required="true"
+                >
+              </div>
+              <div class="form-group">
+                <label for="country" class="form-label">Country</label>
+                <select id="country" name="country" class="form-input" autocomplete="country">
+                  <option value="IN" selected>India</option>
+                  <option value="US">United States</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="AE">UAE</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Delivery Option -->
+            <div style="margin-top:24px">
+              <label class="option-label">Delivery Speed</label>
+              <div style="display:flex;flex-direction:column;gap:12px;margin-top:12px">
+                <label class="payment-method-label">
+                  <input type="radio" name="delivery" value="standard" checked aria-label="Standard delivery 2-4 days free over ₹999">
+                  <div class="payment-method-card">
+                    <div>
+                      <div style="font-weight:600;font-size:0.9rem">Standard Delivery</div>
+                      <div style="font-size:0.78rem;color:var(--text-muted)">2–4 business days</div>
+                    </div>
+                    <div style="font-size:0.85rem;color:var(--gold);font-weight:600">Free above ₹999</div>
+                  </div>
+                </label>
+                <label class="payment-method-label">
+                  <input type="radio" name="delivery" value="express" aria-label="Express delivery 1-2 days ₹99">
+                  <div class="payment-method-card">
+                    <div>
+                      <div style="font-weight:600;font-size:0.9rem">Express Delivery</div>
+                      <div style="font-size:0.78rem;color:var(--text-muted)">1–2 business days</div>
+                    </div>
+                    <div style="font-size:0.85rem;color:var(--gold);font-weight:600">+₹99</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gift Options -->
+          <div class="checkout-card" style="margin-bottom:24px">
+            <div class="checkout-card-header">
+              <i class="fas fa-gift"></i> Gift Options
+            </div>
+            <label style="display:flex;align-items:center;gap:12px;cursor:pointer;font-size:0.9rem;color:var(--text-secondary)" id="gift-wrap-label">
+              <input type="checkbox" id="gift-wrap" name="gift_wrap" style="accent-color:var(--gold);width:16px;height:16px">
+              <span>Add gift wrapping & personalized message card (+₹49)</span>
+            </label>
+            <div id="gift-msg-section" style="display:none;margin-top:16px">
+              <label for="gift-msg" class="form-label">Gift Message (optional)</label>
+              <textarea 
+                id="gift-msg" 
+                name="gift_msg" 
+                class="form-input" 
+                rows="3" 
+                placeholder="Write a personal message for the recipient..." 
+                maxlength="200"
+                style="resize:none;margin-top:8px"
+                aria-label="Gift message"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Payment Methods -->
+          <div class="checkout-card">
+            <div class="checkout-card-header">
+              <i class="fas fa-credit-card"></i> Payment Method
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <label class="payment-method-label">
+                <input type="radio" name="payment" value="card" checked aria-label="Credit or Debit Card">
+                <div class="payment-method-card">
+                  <div style="display:flex;align-items:center;gap:12px">
+                    <i class="fas fa-credit-card" style="color:var(--gold);font-size:1.2rem"></i>
+                    <div>
+                      <div style="font-weight:600;font-size:0.9rem">Credit / Debit Card</div>
+                      <div style="font-size:0.75rem;color:var(--text-muted)">Visa, Mastercard, RuPay</div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="payment-method-label">
+                <input type="radio" name="payment" value="upi" aria-label="UPI Payment">
+                <div class="payment-method-card">
+                  <div style="display:flex;align-items:center;gap:12px">
+                    <i class="fas fa-qrcode" style="color:var(--gold);font-size:1.2rem"></i>
+                    <div>
+                      <div style="font-weight:600;font-size:0.9rem">UPI</div>
+                      <div style="font-size:0.75rem;color:var(--text-muted)">GPay, PhonePe, Paytm</div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="payment-method-label">
+                <input type="radio" name="payment" value="netbanking" aria-label="Net Banking">
+                <div class="payment-method-card">
+                  <div style="display:flex;align-items:center;gap:12px">
+                    <i class="fas fa-university" style="color:var(--gold);font-size:1.2rem"></i>
+                    <div>
+                      <div style="font-weight:600;font-size:0.9rem">Net Banking</div>
+                      <div style="font-size:0.75rem;color:var(--text-muted)">All major banks</div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="payment-method-label">
+                <input type="radio" name="payment" value="cod" aria-label="Cash on Delivery">
+                <div class="payment-method-card">
+                  <div style="display:flex;align-items:center;gap:12px">
+                    <i class="fas fa-money-bill-wave" style="color:var(--gold);font-size:1.2rem"></i>
+                    <div>
+                      <div style="font-weight:600;font-size:0.9rem">Cash on Delivery</div>
+                      <div style="font-size:0.75rem;color:var(--text-muted)">Pay when you receive</div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <!-- Card fields (visible when card selected) -->
+            <div id="card-fields" style="margin-top:20px;display:grid;gap:16px">
+              <div class="form-group">
+                <label for="card-number" class="form-label">Card Number</label>
+                <div class="input-icon-wrap">
+                  <i class="fas fa-credit-card input-icon-el"></i>
+                  <input 
+                    type="text" 
+                    id="card-number" 
+                    class="form-input input-with-icon" 
+                    placeholder="1234 5678 9012 3456" 
+                    maxlength="19"
+                    autocomplete="cc-number"
+                    inputmode="numeric"
+                    aria-label="Card number"
+                  >
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                <div class="form-group">
+                  <label for="card-expiry" class="form-label">Expiry Date</label>
+                  <input 
+                    type="text" 
+                    id="card-expiry" 
+                    class="form-input" 
+                    placeholder="MM / YY" 
+                    maxlength="7"
+                    autocomplete="cc-exp"
+                    inputmode="numeric"
+                    aria-label="Card expiry date"
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="card-cvv" class="form-label">CVV</label>
+                  <input 
+                    type="password" 
+                    id="card-cvv" 
+                    class="form-input" 
+                    placeholder="•••" 
+                    maxlength="4"
+                    autocomplete="cc-csc"
+                    inputmode="numeric"
+                    aria-label="Card CVV"
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="card-name" class="form-label">Cardholder Name</label>
+                <input 
+                  type="text" 
+                  id="card-name" 
+                  class="form-input" 
+                  placeholder="Name as on card" 
+                  autocomplete="cc-name"
+                  maxlength="80"
+                  aria-label="Card holder name"
+                >
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:24px;font-size:1rem;padding:18px">
+            <i class="fas fa-lock"></i> Place Order Securely
+          </button>
+
+          <p style="text-align:center;font-size:0.76rem;color:var(--text-muted);margin-top:14px">
+            <i class="fas fa-shield-alt" style="color:var(--gold)"></i>
+            Your payment is encrypted and secured by SSL
+          </p>
+        </form>
+      </div>
+
+      <!-- Order Summary Sidebar -->
+      <aside class="checkout-summary" aria-label="Order summary">
+        <h3 style="font-family:var(--font-heading);font-size:1.1rem;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.07)">
+          <i class="fas fa-shopping-bag" style="color:var(--gold);margin-right:8px"></i> Order Summary
+        </h3>
+
+        <!-- Items List -->
+        <div id="checkout-items" style="display:flex;flex-direction:column;gap:14px;margin-bottom:20px;max-height:280px;overflow-y:auto;padding-right:4px">
+          <!-- Populated by cart.js -->
+        </div>
+
+        <div style="padding-top:16px;border-top:1px solid rgba(255,255,255,0.07);display:flex;flex-direction:column;gap:10px">
+          <div class="summary-row">
+            <span class="summary-label">Subtotal</span>
+            <span class="summary-value" id="co-subtotal">₹0</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Shipping</span>
+            <span class="summary-value" id="co-shipping">₹89</span>
+          </div>
+          <div class="summary-total-row" style="margin-top:8px">
+            <span>Grand Total</span>
+            <span id="co-total">₹0</span>
+          </div>
+        </div>
+
+        <!-- Coupon display -->
+        <div style="margin-top:20px;background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.15);border-radius:var(--radius-md);padding:14px">
+          <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px"><i class="fas fa-tag" style="color:var(--gold)"></i> Saved coupon from cart</div>
+          <div style="font-size:0.8rem;color:var(--text-secondary)">Coupon applied at cart stage.</div>
+        </div>
+
+        <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px;font-size:0.78rem;color:var(--text-muted)">
+            <i class="fas fa-shipping-fast" style="color:var(--gold);width:16px"></i> Free delivery on orders above ₹999
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:0.78rem;color:var(--text-muted)">
+            <i class="fas fa-undo" style="color:var(--gold);width:16px"></i> 7-day hassle-free returns
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:0.78rem;color:var(--text-muted)">
+            <i class="fas fa-gift" style="color:var(--gold);width:16px"></i> Premium gift packaging available
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-logo" style="margin-bottom:16px;display:inline-flex">
+          <div class="logo-icon">G</div>
+          <span class="logo-text">Gift4You</span>
+        </a>
+        <p class="footer-tagline">Premium handcrafted gifts for every occasion.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="shop.html" class="footer-link"><i class="fas fa-chevron-right"></i> Shop</a></li>
+          <li><a href="cart.html" class="footer-link"><i class="fas fa-chevron-right"></i> Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+91 98765 43210</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>hello@gift4you.in</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="width:100%">
+      <p class="footer-copyright">© 2026 <span>Gift4You</span>. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919876543210?text=Hi%20Gift4You!" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="whatsapp-tooltip">Chat with us!</span>
+</a>
+
+<button class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="js/product.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/script.js"></script>
+<script>
+  // Gift wrap toggle
+  document.getElementById('gift-wrap').addEventListener('change', function() {
+    document.getElementById('gift-msg-section').style.display = this.checked ? 'block' : 'none';
+  });
+
+  // Payment method toggle
+  document.querySelectorAll('input[name="payment"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+      const cardFields = document.getElementById('card-fields');
+      cardFields.style.display = this.value === 'card' ? 'grid' : 'none';
+    });
+  });
+
+  // Card number formatting
+  const cardInput = document.getElementById('card-number');
+  if (cardInput) {
+    cardInput.addEventListener('input', function() {
+      let val = this.value.replace(/\D/g, '').slice(0, 16);
+      this.value = val.replace(/(.{4})/g, '$1 ').trim();
+    });
+  }
+
+  // Expiry date formatting
+  const expiryInput = document.getElementById('card-expiry');
+  if (expiryInput) {
+    expiryInput.addEventListener('input', function() {
+      let val = this.value.replace(/\D/g, '').slice(0, 4);
+      if (val.length >= 3) {
+        val = val.slice(0, 2) + ' / ' + val.slice(2);
+      }
+      this.value = val;
+    });
+  }
+</script>
+</body>
+</html>

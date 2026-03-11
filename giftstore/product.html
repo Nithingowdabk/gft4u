@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View premium gift product details at Gift4You. High quality personalized gifts.">
+  <title>Product – Gift4You | Premium Gift Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .product-description-text {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .spec-table td {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.88rem;
+    }
+    .spec-table td:first-child {
+      color: var(--text-muted);
+      width: 40%;
+    }
+    .spec-table td:last-child {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    .related-section { padding: 80px 0; background: #111; }
+  </style>
+</head>
+<body>
+
+<div id="loading-screen">
+  <div class="loader-logo">Gift4You</div>
+  <div class="loader-ring"></div>
+</div>
+
+<div class="mobile-overlay"></div>
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-logo" aria-label="Gift4You Home">
+      <div class="logo-icon">G</div>
+      <span class="logo-text">Gift4You</span>
+    </a>
+    <ul class="navbar-nav" role="list">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="shop.html" class="nav-link">Shop</a></li>
+      <li><a href="product.html" class="nav-link active">Products</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <a href="cart.html" class="nav-icon-btn" aria-label="Cart">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge" style="display:none">0</span>
+      </a>
+
+    </div>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="shop.html" class="nav-link">Shop</a>
+  <a href="product.html" class="nav-link active">Products</a>
+  <a href="cart.html" class="nav-link">Cart</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+
+</nav>
+
+<main class="product-page page-wrapper" id="product-detail">
+
+  <div class="container">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" style="margin-bottom:36px" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fas fa-chevron-right" style="font-size:0.7rem"></i>
+      <a href="shop.html">Shop</a>
+      <i class="fas fa-chevron-right" style="font-size:0.7rem"></i>
+      <span id="pd-category" aria-current="page">Product</span>
+    </nav>
+
+    <!-- Product Layout -->
+    <div class="product-layout">
+
+      <!-- Gallery -->
+      <div class="product-gallery reveal-left">
+        <div class="product-main-image">
+          <img 
+            id="pd-main-img" 
+            src="https://picsum.photos/seed/frame1/600/600" 
+            alt="Product Image"
+            loading="eager"
+          >
+          <div class="product-zoom-badge">
+            <i class="fas fa-search-plus"></i> Hover to zoom
+          </div>
+        </div>
+        <div class="product-thumbnails" id="pd-thumbs">
+          <div class="thumb-item active">
+            <img src="https://picsum.photos/seed/frame1/200/200" alt="View 1" loading="lazy">
+          </div>
+          <div class="thumb-item">
+            <img src="https://picsum.photos/seed/frame2/200/200" alt="View 2" loading="lazy">
+          </div>
+          <div class="thumb-item">
+            <img src="https://picsum.photos/seed/frame3/200/200" alt="View 3" loading="lazy">
+          </div>
+          <div class="thumb-item">
+            <img src="https://picsum.photos/seed/frame4/200/200" alt="View 4" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Details -->
+      <div class="reveal-right">
+        <div class="product-info-header">
+          <div class="product-category" id="pd-category-label">3D Photo Frames</div>
+          <h1 class="product-info-title" id="pd-name">Luxury Personalized Photo Frame</h1>
+          <div class="product-info-meta">
+            <div class="product-info-rating">
+              <div class="stars" id="pd-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span id="pd-rating-text">4.8 (128 reviews)</span>
+            </div>
+            <div class="in-stock">In Stock</div>
+            <span class="badge badge-gold">Best Seller</span>
+          </div>
+        </div>
+
+        <div class="product-price-section">
+          <div class="product-price-large" id="pd-price">₹1,299</div>
+          <span class="product-price-original" id="pd-original-price">₹1,999</span>
+          <span class="product-saving" id="pd-saving">Save ₹700 (35% off)</span>
+        </div>
+
+        <!-- Variants -->
+        <div class="product-options" style="margin-bottom:24px">
+          <div class="option-label">Size / Variant</div>
+          <div class="option-buttons" id="pd-variants">
+            <button class="option-btn active">Small (4×6)</button>
+            <button class="option-btn">Medium (5×7)</button>
+            <button class="option-btn">Large (8×10)</button>
+          </div>
+        </div>
+
+        <!-- Personalization -->
+        <div class="product-options" style="margin-bottom:24px">
+          <div class="option-label">Personalization (optional)</div>
+          <textarea 
+            class="form-input" 
+            rows="2" 
+            placeholder="Enter custom text, e.g. names, dates..."
+            maxlength="200"
+            aria-label="Personalization text"
+            style="border-radius:var(--radius-md);resize:none"
+          ></textarea>
+        </div>
+
+        <!-- Quantity -->
+        <div class="quantity-row">
+          <div class="option-label" style="margin-bottom:0">Quantity</div>
+          <div class="qty-control" id="pd-qty">
+            <button class="qty-btn qty-minus" aria-label="Decrease quantity">
+              <i class="fas fa-minus" style="font-size:0.7rem"></i>
+            </button>
+            <span class="qty-value">1</span>
+            <button class="qty-btn qty-plus" aria-label="Increase quantity">
+              <i class="fas fa-plus" style="font-size:0.7rem"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="product-cta-row">
+          <button id="pd-add-cart" class="btn btn-primary btn-lg" style="flex:2">
+            <i class="fas fa-shopping-bag"></i> Add to Cart
+          </button>
+          <button id="pd-buy-now" class="btn btn-outline btn-lg" style="flex:1">
+            <i class="fas fa-bolt"></i> Buy Now
+          </button>
+          <button id="pd-wishlist" class="btn btn-ghost" data-wishlist="p1" style="flex-shrink:0;padding:14px 18px">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+
+        <!-- Features -->
+        <div class="product-features" id="pd-features">
+          <div class="product-feature">
+            <i class="fas fa-check-circle"></i><span>LED illumination</span>
+          </div>
+          <div class="product-feature">
+            <i class="fas fa-check-circle"></i><span>Personalized text</span>
+          </div>
+          <div class="product-feature">
+            <i class="fas fa-check-circle"></i><span>Premium wood frame</span>
+          </div>
+          <div class="product-feature">
+            <i class="fas fa-check-circle"></i><span>Gift packaging</span>
+          </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.06)">
+          <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--text-muted)">
+            <i class="fas fa-shipping-fast" style="color:var(--gold)"></i> Free Delivery on ₹999+
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--text-muted)">
+            <i class="fas fa-undo" style="color:var(--gold)"></i> 7-Day Returns
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--text-muted)">
+            <i class="fas fa-shield-alt" style="color:var(--gold)"></i> Secure Payment
+          </div>
+        </div>
+
+        <!-- Share -->
+        <div style="display:flex;align-items:center;gap:12px;margin-top:24px">
+          <span style="font-size:0.8rem;color:var(--text-muted)">Share:</span>
+          <a href="#" class="social-link" aria-label="Share on Facebook" style="width:34px;height:34px;font-size:0.85rem"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Share on Instagram" style="width:34px;height:34px;font-size:0.85rem"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Share on WhatsApp" style="width:34px;height:34px;font-size:0.85rem"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="social-link" aria-label="Copy link" style="width:34px;height:34px;font-size:0.85rem"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+
+    </div><!-- /.product-layout -->
+
+    <!-- Product Tabs -->
+    <div style="margin-top:60px">
+      <div class="product-tabs" role="tablist">
+        <button class="tab-btn active" data-tab="description" role="tab" aria-selected="true">Description</button>
+        <button class="tab-btn" data-tab="specs" role="tab" aria-selected="false">Specifications</button>
+        <button class="tab-btn" data-tab="reviews" role="tab" aria-selected="false">Reviews (128)</button>
+        <button class="tab-btn" data-tab="shipping" role="tab" aria-selected="false">Delivery & Returns</button>
+      </div>
+
+      <div id="tab-description" class="tab-panel active" role="tabpanel">
+        <p class="product-description-text" id="pd-description">
+          A premium 3D LED photo frame crafted with love. Perfect for birthdays, anniversaries, and wedding gifts. Personalize it with your favorite memory.
+        </p>
+        <div style="margin-top:20px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
+          <div style="background:var(--bg-card);border:var(--border-card);border-radius:var(--radius-md);padding:20px">
+            <h4 style="font-family:var(--font-heading);font-size:1rem;margin-bottom:12px">What's Included</h4>
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:0.87rem;color:var(--text-muted)">
+              <li><i class="fas fa-check" style="color:var(--gold);margin-right:8px"></i>1x LED Photo Frame</li>
+              <li><i class="fas fa-check" style="color:var(--gold);margin-right:8px"></i>USB Power Cable</li>
+              <li><i class="fas fa-check" style="color:var(--gold);margin-right:8px"></i>Luxury Gift Box</li>
+              <li><i class="fas fa-check" style="color:var(--gold);margin-right:8px"></i>Personalized Card</li>
+            </ul>
+          </div>
+          <div style="background:var(--bg-card);border:var(--border-card);border-radius:var(--radius-md);padding:20px">
+            <h4 style="font-family:var(--font-heading);font-size:1rem;margin-bottom:12px">How to Order</h4>
+            <ol style="display:flex;flex-direction:column;gap:8px;font-size:0.87rem;color:var(--text-muted);padding-left:16px">
+              <li>Select your preferred size</li>
+              <li>Enter personalization text</li>
+              <li>Add to cart & checkout</li>
+              <li>Receive in 2–4 business days</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-specs" class="tab-panel" role="tabpanel" style="display:none">
+        <div style="background:var(--bg-card);border:var(--border-card);border-radius:var(--radius-lg);padding:28px">
+          <table class="spec-table">
+            <tbody>
+              <tr><td>Material</td><td>Premium MDF + Acrylic</td></tr>
+              <tr><td>Frame Size</td><td>Small: 4×6 in, Medium: 5×7 in, Large: 8×10 in</td></tr>
+              <tr><td>Lighting</td><td>Warm White LED</td></tr>
+              <tr><td>Power</td><td>USB 5V (cable included)</td></tr>
+              <tr><td>Personalization</td><td>Up to 50 characters</td></tr>
+              <tr><td>Delivery</td><td>2–4 business days</td></tr>
+              <tr><td>Weight</td><td>350g (Medium)</td></tr>
+              <tr><td>Color Options</td><td>Natural, Black, White</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="tab-reviews" class="tab-panel" role="tabpanel" style="display:none">
+        <div style="background:var(--bg-card);border:var(--border-card);border-radius:var(--radius-lg);padding:28px;margin-bottom:28px">
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center">
+            <div style="text-align:center">
+              <div style="font-family:var(--font-heading);font-size:4rem;font-weight:800;background:var(--gradient-luxury);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1">4.8</div>
+              <div class="stars" style="justify-content:center;font-size:1rem">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:6px">128 reviews</div>
+            </div>
+            <div>
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <div style="display:flex;align-items:center;gap:12px;font-size:0.78rem">
+                  <span style="color:var(--gold);white-space:nowrap">5 ★</span>
+                  <div style="flex:1;height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden">
+                    <div style="height:100%;width:78%;background:var(--gold);border-radius:3px"></div>
+                  </div>
+                  <span style="color:var(--text-muted);white-space:nowrap">78%</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;font-size:0.78rem">
+                  <span style="color:var(--gold);white-space:nowrap">4 ★</span>
+                  <div style="flex:1;height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden">
+                    <div style="height:100%;width:14%;background:var(--gold);border-radius:3px"></div>
+                  </div>
+                  <span style="color:var(--text-muted);white-space:nowrap">14%</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;font-size:0.78rem">
+                  <span style="color:var(--gold);white-space:nowrap">3 ★</span>
+                  <div style="flex:1;height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden">
+                    <div style="height:100%;width:5%;background:var(--gold);border-radius:3px"></div>
+                  </div>
+                  <span style="color:var(--text-muted);white-space:nowrap">5%</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;font-size:0.78rem">
+                  <span style="color:var(--gold);white-space:nowrap">2 ★</span>
+                  <div style="flex:1;height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden">
+                    <div style="height:100%;width:2%;background:var(--gold);border-radius:3px"></div>
+                  </div>
+                  <span style="color:var(--text-muted);white-space:nowrap">2%</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;font-size:0.78rem">
+                  <span style="color:var(--gold);white-space:nowrap">1 ★</span>
+                  <div style="flex:1;height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden">
+                    <div style="height:100%;width:1%;background:var(--gold);border-radius:3px"></div>
+                  </div>
+                  <span style="color:var(--text-muted);white-space:nowrap">1%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px" id="pd-reviews">
+          <!-- Populated by product.js -->
+        </div>
+      </div>
+
+      <div id="tab-shipping" class="tab-panel" role="tabpanel" style="display:none">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+          <div style="background:var(--bg-card);border:var(--border-card);border-radius:var(--radius-lg);padding:28px">
+            <i class="fas fa-shipping-fast" style="font-size:1.8rem;color:var(--gold);margin-bottom:16px;display:block"></i>
+            <h4 style="font-family:var(--font-heading);font-size:1.05rem;margin-bottom:12px">Delivery Information</h4>
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:0.85rem;color:var(--text-muted)">
+              <li>• Standard: 2–4 business days</li>
+              <li>• Express: 1–2 business days (+₹99)</li>
+              <li>• Same Day: in select cities</li>
+              <li>• Free shipping on orders above ₹999</li>
+            </ul>
+          </div>
+          <div style="background:var(--bg-card);border:var(--border-card);border-radius:var(--radius-lg);padding:28px">
+            <i class="fas fa-undo-alt" style="font-size:1.8rem;color:var(--gold);margin-bottom:16px;display:block"></i>
+            <h4 style="font-family:var(--font-heading);font-size:1.05rem;margin-bottom:12px">Returns & Exchanges</h4>
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:0.85rem;color:var(--text-muted)">
+              <li>• 7-day hassle-free returns</li>
+              <li>• Damaged items replaced free</li>
+              <li>• Personalized items non-returnable</li>
+              <li>• Contact support for help</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- Related Products -->
+<section class="related-section" aria-label="Related Products">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">You Might Also Like</span>
+      <h2 class="section-title">Related <span>Products</span></h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="products-grid" data-product-grid="featured" data-limit="4">
+      <!-- Populated by product.js -->
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-logo" style="margin-bottom:16px;display:inline-flex">
+          <div class="logo-icon">G</div>
+          <span class="logo-text">Gift4You</span>
+        </a>
+        <p class="footer-tagline">Premium handcrafted gifts for every occasion.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="shop.html" class="footer-link"><i class="fas fa-chevron-right"></i> Shop</a></li>
+          <li><a href="cart.html" class="footer-link"><i class="fas fa-chevron-right"></i> Cart</a></li>
+          <li><a href="contact.html" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul class="footer-links">
+
+          <li><a href="cart.html" class="footer-link"><i class="fas fa-chevron-right"></i> My Cart</a></li>
+          <li><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Wishlist</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i><span>+91 98765 43210</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i><span>hello@gift4you.in</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="width:100%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <p class="footer-copyright">© 2026 <span>Gift4You</span>. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919876543210?text=Hi%20Gift4You!" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="whatsapp-tooltip">Chat with us!</span>
+</a>
+
+<button class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="js/product.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/script.js"></script>
+<script>
+  // Default: show p1 if no query param
+  document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(location.search);
+    if (!params.get('id')) {
+      history.replaceState({}, '', '?id=p1');
+    }
+  });
+</script>
+</body>
+</html>
