@@ -7,10 +7,10 @@
 
 /* ── CSS Variables ── */
 :root {
-  --bg-primary: #141414;
-  --bg-secondary: #2C2C2C;
-  --bg-card: #1E1E1E;
-  --bg-card-hover: #252525;
+  --bg-primary: #FDF8F5;
+  --bg-secondary: #F2EAE4;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FDF1EC;
 
   --gold: #C9956C;
   --gold-dark: #A67C52;
@@ -18,23 +18,23 @@
   --gold-hover: #D4A882;
   --orange: #C47A4A;
 
-  --text-primary: #FFFFFF;
-  --text-secondary: #CCCCCC;
-  --text-muted: #888888;
+  --text-primary: #F5EDE6;
+  --text-secondary: #4A4A4A;
+  --text-muted: #8A7060;
 
   --gradient-luxury: linear-gradient(135deg, #A67C52 0%, #C9956C 50%, #F0D5C8 100%);
   --gradient-romantic: linear-gradient(135deg, #FF4E50 0%, #F9D423 100%);
   --gradient-dark: linear-gradient(135deg, #141E30 0%, #243B55 100%);
   --gradient-festive: linear-gradient(135deg, #C31432 0%, #240B36 100%);
-  --gradient-bg: linear-gradient(160deg, #141414 0%, #1a1a1a 40%, #2C2C2C 100%);
+  --gradient-bg: linear-gradient(160deg, #FDF8F5 0%, #F5EDE6 40%, #EED9CC 100%);
   --gradient-gold-btn: linear-gradient(135deg, #A67C52 0%, #C9956C 50%, #C47A4A 100%);
 
   --border-gold: 1px solid rgba(201, 149, 108, 0.2);
-  --border-card: 1px solid rgba(255,255,255,0.06);
+  --border-card: 1px solid rgba(166, 124, 82, 0.15);
 
   --shadow-gold: 0 0 30px rgba(201, 149, 108, 0.15);
-  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
-  --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 8px 32px rgba(166, 124, 82, 0.12);
+  --shadow-hover: 0 20px 50px rgba(166, 124, 82, 0.2);
   --shadow-btn: 0 4px 20px rgba(201, 149, 108, 0.4);
 
   --radius-sm: 8px;
@@ -170,10 +170,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* ── Selection ── */
-::selection {
-  background: rgba(201, 149, 108, 0.25);
-  color: var(--text-primary);
-}
+::selection { background: rgba(201, 149, 108, 0.3); color: #1A1A1A; }
 
 /* ── Utility ── */
 .container {
@@ -262,7 +259,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .btn-primary {
   background: var(--gradient-gold-btn);
-  color: #0a0a0a;
+  color: #1A1A1A;
   box-shadow: var(--shadow-btn);
 }
 
@@ -283,15 +280,13 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .btn-outline:hover {
   background: var(--gold);
-  color: #0a0a0a;
+  color: #1A1A1A;
   box-shadow: var(--shadow-btn);
   transform: translateY(-2px);
 }
 
 .btn-ghost {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-primary);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(166, 124, 82, 0.08); color: var(--text-primary); border: 1px solid rgba(166, 124, 82, 0.25);
   backdrop-filter: blur(10px);
 }
 
@@ -333,7 +328,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .badge-gold {
   background: var(--gradient-luxury);
-  color: #0a0a0a;
+  color: #1A1A1A;
 }
 
 .badge-red {
@@ -343,7 +338,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .badge-green {
   background: linear-gradient(135deg, #11998e, #38ef7d);
-  color: #0a0a0a;
+  color: #1A1A1A;
 }
 
 /* ══════════════════════════════════════════
@@ -365,7 +360,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .navbar.scrolled {
-  background: rgba(14, 14, 14, 0.95);
+  background: rgba(253, 248, 245, 0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: var(--border-gold);
@@ -400,7 +395,7 @@ input[type="number"]::-webkit-inner-spin-button {
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
-  color: #0a0a0a;
+  color: #1A1A1A;
   font-weight: 800;
 }
 
@@ -488,7 +483,7 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 50%;
   font-size: 0.65rem;
   font-weight: 700;
-  color: #0a0a0a;
+  color: #1A1A1A;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -536,7 +531,7 @@ input[type="number"]::-webkit-inner-spin-button {
   top: 0; right: -100%;
   width: min(360px, 100%);
   height: 100vh;
-  background: rgba(14, 14, 14, 0.98);
+  background: rgba(253, 248, 245, 0.99);
   backdrop-filter: blur(30px);
   z-index: 999;
   padding: 100px 32px 40px;
@@ -564,7 +559,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .mobile-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(90, 60, 40, 0.4);
   z-index: 998;
   opacity: 0;
   pointer-events: none;
@@ -586,7 +581,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(160deg, #0a0a0a 0%, #141414 40%, #1a0f00 100%);
+  background: linear-gradient(160deg, #FDF8F5 0%, #F5EDE6 40%, #EED9CC 100%);
   padding-top: var(--navbar-height);
   padding-bottom: 60px;
   box-sizing: border-box;
@@ -616,12 +611,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(10, 10, 10, 0.95) 0%,
-    rgba(10, 10, 10, 0.7) 50%,
-    rgba(10, 10, 10, 0.3) 100%
-  );
+  background: linear-gradient(to right, rgba(253, 248, 245, 0.82) 0%, rgba(253, 248, 245, 0.55) 50%, rgba(253, 248, 245, 0.15) 100%);
 }
 
 .hero-particles {
@@ -882,7 +872,7 @@ input[type="number"]::-webkit-inner-spin-button {
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  color: #0a0a0a;
+  color: #1A1A1A;
   margin-bottom: 12px;
   transform: translateY(8px);
   opacity: 0;
@@ -935,7 +925,7 @@ input[type="number"]::-webkit-inner-spin-button {
    PRODUCT CARD
 ══════════════════════════════════════════ */
 .products-section {
-  background: linear-gradient(180deg, var(--bg-primary) 0%, #111111 100%);
+  background: linear-gradient(180deg, var(--bg-primary) 0%, #F2EAE4 100%);
 }
 
 .products-grid {
@@ -964,7 +954,7 @@ input[type="number"]::-webkit-inner-spin-button {
   position: relative;
   overflow: hidden;
   aspect-ratio: 1;
-  background: #111;
+  background: #F5EDE6;
 }
 
 .product-card-image img {
@@ -1006,7 +996,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .product-action-btn {
   width: 38px; height: 38px;
-  background: rgba(14, 14, 14, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 50%;
   display: flex;
@@ -1021,7 +1011,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .product-action-btn:hover {
   background: var(--gold);
   border-color: var(--gold);
-  color: #0a0a0a;
+  color: #1A1A1A;
   transform: scale(1.1);
 }
 
@@ -1034,7 +1024,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .product-quick-view {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  background: rgba(14, 14, 14, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   padding: 12px;
   text-align: center;
@@ -1131,7 +1121,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0a0a0a;
+  color: #1A1A1A;
   font-size: 0.9rem;
   font-weight: 700;
   transition: var(--transition);
@@ -1270,7 +1260,7 @@ input[type="number"]::-webkit-inner-spin-button {
    WHY CHOOSE US
 ══════════════════════════════════════════ */
 .why-us {
-  background: linear-gradient(180deg, #111111 0%, var(--bg-primary) 100%);
+  background: linear-gradient(180deg, #F2EAE4 0%, var(--bg-primary) 100%);
 }
 
 .why-us-grid {
@@ -1314,7 +1304,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .why-icon {
   width: 72px; height: 72px;
   margin: 0 auto 24px;
-  background: linear-gradient(135deg, rgba(166, 124, 82,0.1) 0%, rgba(201, 149, 108,0.05) 100%);
+  background: linear-gradient(135deg, rgba(166, 124, 82, 0.12) 0%, rgba(201, 149, 108, 0.06) 100%);
   border: 1px solid rgba(201, 149, 108,0.2);
   border-radius: var(--radius-md);
   display: flex;
@@ -1328,7 +1318,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .why-card:hover .why-icon {
   background: var(--gradient-luxury);
   border-color: transparent;
-  color: #0a0a0a;
+  color: #1A1A1A;
   transform: scale(1.1) rotate(5deg);
 }
 
@@ -1454,7 +1444,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .slider-btn:hover {
   background: var(--gold);
   border-color: var(--gold);
-  color: #0a0a0a;
+  color: #1A1A1A;
   transform: scale(1.1);
 }
 
@@ -1545,7 +1535,7 @@ input[type="number"]::-webkit-inner-spin-button {
    NEWSLETTER
 ══════════════════════════════════════════ */
 .newsletter {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a0f00 50%, #0a0a0a 100%);
+  background: linear-gradient(135deg, #1A1A1A 0%, #1a0f00 50%, #1A1A1A 100%);
   position: relative;
   overflow: hidden;
 }
@@ -1635,7 +1625,7 @@ input[type="number"]::-webkit-inner-spin-button {
    FOOTER
 ══════════════════════════════════════════ */
 .footer {
-  background: #0a0a0a;
+  background: #1A1A1A;
   border-top: var(--border-gold);
   padding: 80px 0 0;
 }
@@ -1681,7 +1671,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .social-link:hover {
   background: var(--gold);
   border-color: var(--gold);
-  color: #0a0a0a;
+  color: #1A1A1A;
   transform: translateY(-3px);
 }
 
@@ -1789,7 +1779,7 @@ input[type="number"]::-webkit-inner-spin-button {
 ══════════════════════════════════════════ */
 .shop-hero {
   padding: 140px 0 70px;
-  background: linear-gradient(160deg, #0a0a0a 0%, #141414 60%, #1a0f00 100%);
+  background: linear-gradient(160deg, #1A1A1A 0%, #FDF8F5 60%, #1a0f00 100%);
   text-align: center;
 }
 
@@ -1943,7 +1933,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .filter-item.active .filter-checkbox::after {
   content: '✓';
   font-size: 0.7rem;
-  color: #0a0a0a;
+  color: #1A1A1A;
   font-weight: 700;
 }
 
@@ -2095,7 +2085,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .page-btn.active {
   background: var(--gold);
   border-color: var(--gold);
-  color: #0a0a0a;
+  color: #1A1A1A;
   font-weight: 700;
 }
 
@@ -2722,7 +2712,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .step-item.active .step-num {
   background: var(--gold);
   border-color: var(--gold);
-  color: #0a0a0a;
+  color: #1A1A1A;
 }
 
 .step-item.active {
@@ -2935,7 +2925,7 @@ input[type="number"]::-webkit-inner-spin-button {
   align-items: center;
   justify-content: center;
   padding: 100px 24px;
-  background: linear-gradient(160deg, #0a0a0a 0%, #141414 40%, #1a0f00 100%);
+  background: linear-gradient(160deg, #FDF8F5 0%, #F5EDE6 40%, #EED9CC 100%);
   position: relative;
   overflow: hidden;
 }
@@ -3173,7 +3163,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .contact-detail-icon:hover {
   background: var(--gold);
-  color: #0a0a0a;
+  color: #1A1A1A;
 }
 
 .contact-detail-text h4 {
@@ -3284,7 +3274,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0a0a0a;
+  color: #1A1A1A;
   font-size: 1rem;
   z-index: 9999;
   box-shadow: var(--shadow-btn);
@@ -3741,7 +3731,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .bg-darker {
-  background: #0a0a0a;
+  background: #1A1A1A;
 }
 
 .bg-pattern {
@@ -4007,7 +3997,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .auth-visual {
   position: relative;
-  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%);
+  background: linear-gradient(135deg, #0d0d0d 0%, #F5EDE6 50%, #0d0d0d 100%);
   display: flex;
   align-items: center;
   justify-content: center;
